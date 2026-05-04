@@ -1,0 +1,86 @@
+[
+  {
+    "family": "foundationalCapacity",
+    "dimension": "administrative_resource_mobilisation",
+    "label": "Administrative / resource mobilisation capacity",
+    "description": "Administrative, staffing, funding, procurement, or resource mobilisation signals.",
+    "schools": 441,
+    "schoolsWithEvidence": 155,
+    "pctSchoolsWithEvidence": 35.15,
+    "meanScore": 24.79,
+    "medianScore": 0.0,
+    "totalEvidenceItems": 1155
+  },
+  {
+    "family": "foundationalCapacity",
+    "dimension": "curriculum_pedagogical_integration",
+    "label": "Curriculum and pedagogical integration",
+    "description": "Curriculum and pedagogy signals, including broad digital learning foundations that can support later AI use.",
+    "schools": 441,
+    "schoolsWithEvidence": 265,
+    "pctSchoolsWithEvidence": 60.09,
+    "meanScore": 43.46,
+    "medianScore": 33.33,
+    "totalEvidenceItems": 3055
+  },
+  {
+    "family": "foundationalCapacity",
+    "dimension": "foundational_digital_infrastructure",
+    "label": "Foundational digital infrastructure",
+    "description": "Visible platforms, devices, networks, learning systems, or digital infrastructure that can support AI adoption.",
+    "schools": 441,
+    "schoolsWithEvidence": 159,
+    "pctSchoolsWithEvidence": 36.05,
+    "meanScore": 23.81,
+    "medianScore": 0.0,
+    "totalEvidenceItems": 1333
+  },
+  {
+    "family": "foundationalCapacity",
+    "dimension": "governance_responsible_use",
+    "label": "Governance and responsible use",
+    "description": "Rules, guidance, privacy, ethics, responsible use, or governance signals.",
+    "schools": 441,
+    "schoolsWithEvidence": 132,
+    "pctSchoolsWithEvidence": 29.93,
+    "meanScore": 16.93,
+    "medianScore": 0.0,
+    "totalEvidenceItems": 406
+  },
+  {
+    "family": "foundationalCapacity",
+    "dimension": "strategic_leadership_planning",
+    "label": "Strategic leadership and planning",
+    "description": "Published leadership, planning, or strategic direction relevant to future AI education implementation.",
+    "schools": 441,
+    "schoolsWithEvidence": 106,
+    "pctSchoolsWithEvidence": 24.04,
+    "meanScore": 14.81,
+    "medianScore": 0.0,
+    "totalEvidenceItems": 675
+  },
+  {
+    "family": "foundationalCapacity",
+    "dimension": "student_digital_ai_learning_opportunities",
+    "label": "Student digital / AI learning opportunities",
+    "description": "Student STEM, coding, robotics, e-learning, digital, or AI learning opportunities treated as foundational capacity.",
+    "schools": 441,
+    "schoolsWithEvidence": 246,
+    "pctSchoolsWithEvidence": 55.78,
+    "meanScore": 41.65,
+    "medianScore": 33.33,
+    "totalEvidenceItems": 1954
+  },
+  {
+    "family": "foundationalCapacity",
+    "dimension": "teacher_development_capacity",
+    "label": "Teacher development and human capacity",
+    "description": "Teacher development, professional learning, or human-capacity evidence that may help schools absorb AI funding.",
+    "schools": 441,
+    "schoolsWithEvidence": 162,
+    "pctSchoolsWithEvidence": 36.73,
+    "meanScore": 26.61,
+    "medianScore": 0.0,
+    "totalEvidenceItems": 1869
+  }
+]

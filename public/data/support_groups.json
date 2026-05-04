@@ -1,0 +1,110 @@
+{
+  "supportPriorityCounts": [
+    {
+      "label": "Tier 1: Immediate validation / intensive support candidate",
+      "count": 45,
+      "key": "tier1"
+    },
+    {
+      "label": "Tier 2: Targeted capacity-building candidate",
+      "count": 66,
+      "key": "tier2"
+    },
+    {
+      "label": "Tier 3: General monitoring / standard support",
+      "count": 220,
+      "key": "tier3"
+    },
+    {
+      "label": "Tier 4: Lower immediate support need / peer-learning candidate",
+      "count": 110,
+      "key": "tier4"
+    }
+  ],
+  "supportTiers": [
+    {
+      "key": "tier1",
+      "tier": "Tier 1",
+      "label": "Immediate validation and support candidate",
+      "fullLabel": "Tier 1: Immediate validation / intensive support candidate",
+      "count": 45,
+      "meaning": "Top 10% support need. These schools are candidates for manual validation and early support.",
+      "risk": "Low publication visibility or weak capacity signals may hide specific support needs.",
+      "support": "Use follow-up validation, basic planning support, teacher development, governance checks, infrastructure review, and contextual support where needed.",
+      "actions": [
+        "Manual validation",
+        "Teacher support",
+        "Infrastructure review"
+      ],
+      "percentileBand": "Top 10% support need",
+      "meanSupportNeed": 100.0,
+      "medianSupportNeed": 100.0,
+      "meanFoundationalCapacity": 0.0,
+      "meanEarlySignal": 0.0,
+      "meanVisibility": 14.6
+    },
+    {
+      "key": "tier2",
+      "tier": "Tier 2",
+      "label": "Targeted capacity-building candidate",
+      "fullLabel": "Tier 2: Targeted capacity-building candidate",
+      "count": 66,
+      "meaning": "Next 15% support need. These schools may need targeted help before AI funding becomes classroom practice.",
+      "risk": "Foundational capacity may be too thin for rapid implementation without support.",
+      "support": "Provide capacity-building packages, planning templates, teacher release time, and procurement or governance guidance.",
+      "actions": [
+        "Capacity package",
+        "Planning templates",
+        "Governance guidance"
+      ],
+      "percentileBand": "Next 15%",
+      "meanSupportNeed": 99.83,
+      "medianSupportNeed": 100.0,
+      "meanFoundationalCapacity": 0.29,
+      "meanEarlySignal": 0.69,
+      "meanVisibility": 16.66
+    },
+    {
+      "key": "tier3",
+      "tier": "Tier 3",
+      "label": "General monitoring and standard support",
+      "fullLabel": "Tier 3: General monitoring / standard support",
+      "count": 220,
+      "meaning": "Middle 50% support need. These schools can receive standard support while monitoring visible implementation progress.",
+      "risk": "Implementation may still be uneven across teachers, subjects, and documentation practices.",
+      "support": "Use standard grant guidance, common teacher resources, light-touch monitoring, and optional implementation clinics.",
+      "actions": [
+        "Standard guidance",
+        "Monitoring",
+        "Implementation clinics"
+      ],
+      "percentileBand": "Middle 50%",
+      "meanSupportNeed": 86.03,
+      "medianSupportNeed": 87.92,
+      "meanFoundationalCapacity": 19.96,
+      "meanEarlySignal": 10.45,
+      "meanVisibility": 51.79
+    },
+    {
+      "key": "tier4",
+      "tier": "Tier 4",
+      "label": "Lower immediate support need / peer-learning candidate",
+      "fullLabel": "Tier 4: Lower immediate support need / peer-learning candidate",
+      "count": 110,
+      "meaning": "Lowest 25% support need. These schools show stronger visible capacity or lower immediate support need.",
+      "risk": "Do not convert stronger visible evidence into a prestige ranking.",
+      "support": "Invite voluntary peer learning, resource exchange, demonstration lessons, and mentoring without treating this as a league table.",
+      "actions": [
+        "Peer learning",
+        "Resource exchange",
+        "Voluntary mentoring"
+      ],
+      "percentileBand": "Lowest 25%",
+      "meanSupportNeed": 35.27,
+      "medianSupportNeed": 36.38,
+      "meanFoundationalCapacity": 69.91,
+      "meanEarlySignal": 33.86,
+      "meanVisibility": 81.35
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "family": "earlySignal",
+    "dimension": "ai_assessment",
+    "label": "AI assessment",
+    "description": "Assessment design, integrity, or AI-related assessment practice.",
+    "schools": 441,
+    "schoolsWithEvidence": 95,
+    "pctSchoolsWithEvidence": 21.54,
+    "meanScore": 12.55,
+    "medianScore": 0.0,
+    "totalEvidenceItems": 604
+  },
+  {
+    "family": "earlySignal",
+    "dimension": "ai_assisted_teaching",
+    "label": "AI-assisted teaching",
+    "description": "Direct public evidence of AI-assisted teaching or classroom use.",
+    "schools": 441,
+    "schoolsWithEvidence": 115,
+    "pctSchoolsWithEvidence": 26.08,
+    "meanScore": 15.95,
+    "medianScore": 0.0,
+    "totalEvidenceItems": 669
+  },
+  {
+    "family": "earlySignal",
+    "dimension": "ai_literacy_activity",
+    "label": "AI literacy activities",
+    "description": "Published activities that explicitly build student AI literacy.",
+    "schools": 441,
+    "schoolsWithEvidence": 140,
+    "pctSchoolsWithEvidence": 31.75,
+    "meanScore": 14.97,
+    "medianScore": 0.0,
+    "totalEvidenceItems": 428
+  },
+  {
+    "family": "earlySignal",
+    "dimension": "ai_platform_or_tool",
+    "label": "AI tools / platforms",
+    "description": "Named AI platforms, tools, or school-level access to AI tools.",
+    "schools": 441,
+    "schoolsWithEvidence": 15,
+    "pctSchoolsWithEvidence": 3.4,
+    "meanScore": 1.21,
+    "medianScore": 0.0,
+    "totalEvidenceItems": 21
+  },
+  {
+    "family": "earlySignal",
+    "dimension": "ai_procurement",
+    "label": "AI procurement",
+    "description": "Procurement, purchasing, or vendor/process signals related to AI tools.",
+    "schools": 441,
+    "schoolsWithEvidence": 58,
+    "pctSchoolsWithEvidence": 13.15,
+    "meanScore": 7.33,
+    "medianScore": 0.0,
+    "totalEvidenceItems": 233
+  },
+  {
+    "family": "earlySignal",
+    "dimension": "ai_teacher_development",
+    "label": "AI teacher development",
+    "description": "Professional development specifically focused on AI use.",
+    "schools": 441,
+    "schoolsWithEvidence": 93,
+    "pctSchoolsWithEvidence": 21.09,
+    "meanScore": 13.76,
+    "medianScore": 0.0,
+    "totalEvidenceItems": 497
+  },
+  {
+    "family": "earlySignal",
+    "dimension": "cross_subject_ai_use",
+    "label": "Cross-subject AI use",
+    "description": "AI use across more than one subject or curriculum area.",
+    "schools": 441,
+    "schoolsWithEvidence": 232,
+    "pctSchoolsWithEvidence": 52.61,
+    "meanScore": 37.72,
+    "medianScore": 33.33,
+    "totalEvidenceItems": 1740
+  },
+  {
+    "family": "earlySignal",
+    "dimension": "responsible_ai",
+    "label": "Responsible AI",
+    "description": "Responsible-AI, ethics, privacy, or safe-use implementation signals.",
+    "schools": 441,
+    "schoolsWithEvidence": 49,
+    "pctSchoolsWithEvidence": 11.11,
+    "meanScore": 6.65,
+    "medianScore": 0.0,
+    "totalEvidenceItems": 138
+  }
+]

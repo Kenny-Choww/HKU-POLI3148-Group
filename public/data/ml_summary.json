@@ -1,0 +1,16 @@
+[
+  {
+    "model": "RandomForestRegressor",
+    "target": "Early_Warning_Support_Need_Index_0_100",
+    "holdoutR2": -0.0693,
+    "holdoutRocAuc": null,
+    "cvRocAucMean": null
+  },
+  {
+    "model": "RandomForestClassifier",
+    "target": "tier_1_support_priority",
+    "holdoutR2": null,
+    "holdoutRocAuc": 0.7727,
+    "cvRocAucMean": 0.6349
+  }
+]

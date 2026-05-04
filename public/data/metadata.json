@@ -1,0 +1,66 @@
+{
+  "headlineMetrics": [
+    {
+      "key": "foundationalCapacity",
+      "label": "Foundational AI Implementation Capacity",
+      "value": 27.44,
+      "median": 19.05,
+      "suffix": "/ 100",
+      "meaning": "Basic capacity to absorb future AI funding."
+    },
+    {
+      "key": "earlySignal",
+      "label": "Early AI-Specific Signal",
+      "value": 13.77,
+      "median": 8.33,
+      "suffix": "/ 100",
+      "meaning": "Direct AI-related public evidence, treated cautiously because policy implementation is still early."
+    },
+    {
+      "key": "quality",
+      "label": "AI Quality of Use",
+      "value": 16.93,
+      "median": 5.56,
+      "suffix": "/ 100",
+      "meaning": "Public signals of deeper AI use beyond simple mentions."
+    },
+    {
+      "key": "supportNeed",
+      "label": "Early-Warning Support Need",
+      "value": 76.86,
+      "median": 87.96,
+      "suffix": "/ 100",
+      "meaning": "Candidate need for validation, teacher support, governance support, infrastructure support, or contextual support."
+    },
+    {
+      "key": "visibility",
+      "label": "Evidence Confidence / Publication Visibility",
+      "value": 50.11,
+      "median": 53.31,
+      "suffix": "/ 100",
+      "meaning": "How much public evidence is visible, so publication practice is not confused with school quality."
+    }
+  ],
+  "sourceStats": {
+    "schoolsInAnalysis": 441,
+    "schoolsWithCollectedWebsites": 440,
+    "htmlPages": 8231,
+    "pdfs": 1931,
+    "usableDocuments": 8763,
+    "cleanedEvidenceItems": 12997
+  },
+  "percentileTiers": {
+    "tier1": "Top 10% support need",
+    "tier2": "Next 15%",
+    "tier3": "Middle 50%",
+    "tier4": "Lowest 25%"
+  },
+  "gini": {
+    "foundationalCapacity": 0.566,
+    "earlySignal": 0.627,
+    "quality": 0.634,
+    "supportNeed": 0.183,
+    "visibility": 0.303
+  },
+  "verificationNote": "Headline values are generated from the updated support-prioritisation index files."
+}
