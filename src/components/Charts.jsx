@@ -18,13 +18,12 @@ import {
   formatWhole,
   groupConfig,
   makeHistogram,
-  metricConfig,
-  sourceNote
+  metricConfig
 } from "../utils/data";
-import { CaveatBox, MethodNote, StoryButton } from "./Layout";
+import { CaveatBox, StoryButton } from "./Layout";
 import { GroupLegend } from "./Visuals";
 
-function ChartFrame({ title, annotation, note, children, controls }) {
+function ChartFrame({ title, annotation, children, controls }) {
   return (
     <div className="w-full rounded-md border border-ink/10 bg-white p-4 shadow-soft">
       <div className="mb-4 grid gap-3 xl:grid-cols-[minmax(260px,420px)_minmax(0,1fr)] xl:items-start">
@@ -39,7 +38,6 @@ function ChartFrame({ title, annotation, note, children, controls }) {
         )}
       </div>
       {children}
-      {note && <p className="mt-3 text-xs font-medium text-muted">{note}</p>}
     </div>
   );
 }
@@ -70,9 +68,6 @@ export function IndexDistributionChart({ schoolData, metadata }) {
     <ChartFrame
       title={`${config.label}: schools by score band`}
       annotation="Notice how foundational capacity, early AI-specific signals, support need, and publication visibility tell different parts of the support story."
-      note={sourceNote(
-        "Histogram generated from secondary_school_ai_indices_0_100.csv. Gini values are from ai_index_inequality_statistics.csv."
-      )}
       controls={Object.entries(metricConfig).map(([key, item]) => (
         <button
           key={key}
@@ -187,9 +182,6 @@ export function ReadinessImplementationScatter({ schoolData, metadata, supportGr
       <ChartFrame
         title="Capacity, early AI signal, and support tier"
         annotation="Points are coloured by percentile-based support tiers: top 10%, next 15%, middle 50%, and lowest 25% support need."
-        note={sourceNote(
-          "Scatter generated from secondary_school_support_priority_groups.csv. School names are not shown in the story."
-        )}
       >
         <GroupLegend />
         <p className="mt-3 text-xs font-bold uppercase tracking-[0.12em] text-muted">
@@ -319,9 +311,6 @@ export function DimensionToggleChart({ readinessDimensions, implementationDimens
     <ChartFrame
       title={`${mode === "foundationalCapacity" ? "Foundational capacity" : "Early AI-specific signal"} dimensions with visible evidence`}
       annotation="Broad digital capacity is treated as foundation; direct AI-specific evidence remains thinner and more cautious."
-      note={sourceNote(
-        "Dimension summaries are generated from secondary_school_dimension_scores.csv and output summary tables."
-      )}
       controls={
         <>
           <button
@@ -425,9 +414,6 @@ export function DistrictExplorer({ districtSummary }) {
       <ChartFrame
         title={`District view: ${metric.label}`}
         annotation="District patterns can guide validation, but district alone should not be treated as the cause."
-        note={sourceNote(
-          "District means are descriptive summaries from district_ai_index_summary.csv and district_publication_adjusted_summary.csv."
-        )}
         controls={districtMetricOptions.map((option) => (
           <button
             key={option.key}
@@ -533,19 +519,6 @@ export function PublicationBiasPanel({ publicationBias }) {
       ? metricConfig.foundationalCapacity.color
       : metricConfig.supportNeed.color;
 
-  const correlationText = publicationBias.correlations.map((row) => {
-    const control =
-      row.publicationControl === "total_extracted_text_length"
-        ? "Total extracted text length"
-        : row.publicationControl.includes("Visibility")
-          ? "Evidence confidence / publication visibility"
-          : "Publication volume index";
-    const outcome = row.outcome.includes("Foundational")
-      ? "Foundational capacity"
-      : "Early-warning support need";
-    return `${control} to ${outcome}: rho ${formatNumber(row.spearmanRho, 3)}`;
-  });
-
   return (
     <div className="grid w-full gap-5 xl:grid-cols-[0.85fr_1.15fr]">
       <div className="grid gap-4">
@@ -581,9 +554,6 @@ export function PublicationBiasPanel({ publicationBias }) {
       <ChartFrame
         title="Publication visibility and visible evidence"
         annotation="The relationship is strong enough that website publication practice must be treated as part of the measurement story."
-        note={sourceNote(
-          "Scatter points use Evidence_Confidence_Publication_Visibility_Index_0_100 and original or publication-adjusted index values."
-        )}
         controls={
           <>
             <button
@@ -656,13 +626,6 @@ export function PublicationBiasPanel({ publicationBias }) {
             </ScatterChart>
           </ResponsiveContainer>
         </div>
-        <MethodNote>
-          <ul className="grid gap-1">
-            {correlationText.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </MethodNote>
       </ChartFrame>
     </div>
   );

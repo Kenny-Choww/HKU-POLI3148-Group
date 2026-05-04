@@ -212,15 +212,6 @@ export function CaveatBox({ children, tone = "amber" }) {
   );
 }
 
-export function MethodNote({ children }) {
-  return (
-    <details className="rounded-md border border-ink/10 bg-white p-3 text-sm text-muted">
-      <summary className="cursor-pointer font-semibold text-ink">Method note</summary>
-      <div className="mt-2 leading-relaxed">{children}</div>
-    </details>
-  );
-}
-
 export function DetailsBlock({ title, children }) {
   return (
     <details className="rounded-md border border-ink/10 bg-white p-4 text-sm">

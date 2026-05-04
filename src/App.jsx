@@ -13,7 +13,6 @@ import {
   CaveatBox,
   Checklist,
   LoadingScreen,
-  MethodNote,
   ProgressNav,
   SlideContainer,
   StoryButton
@@ -128,14 +127,7 @@ export default function App() {
         title: "AI for All, or AI for Ready Schools?",
         question: "Will AI education funding reach all schools equally?",
         insight: "Equal funding does not automatically create equal implementation.",
-        content: <OpeningHero />,
-        note: (
-          <MethodNote>
-            Policy values and project framing come from the final report. The
-            story uses cautious language because the evidence is publicly
-            observable, not a complete measure of actual classroom practice.
-          </MethodNote>
-        )
+        content: <OpeningHero />
       },
       {
         section: "Problem",
@@ -143,14 +135,7 @@ export default function App() {
         question: "What has to happen before students actually experience AI education?",
         insight:
           "The project measures public signals along this chain to identify where support may be needed before grants translate into student opportunity.",
-        content: <PolicyChain />,
-        note: (
-          <MethodNote>
-            This page reflects the updated index logic: broad digital indicators
-            are foundational implementation capacity, while direct AI evidence is
-            treated as an early AI-specific signal.
-          </MethodNote>
-        )
+        content: <PolicyChain />
       },
       {
         section: "Evidence",
@@ -158,21 +143,7 @@ export default function App() {
         question: "How can public evidence help prioritise support without judging schools?",
         insight:
           "This study reads public evidence systematically, but treats the result as an early-warning support proxy, not a school grade.",
-        content: <DataPipeline metadata={metadata} />,
-        note: (
-          <MethodNote>
-            Verified source counts: {formatWhole(metadata.sourceStats.schoolsInAnalysis)} schools,
-            {" "}
-            {formatWhole(metadata.sourceStats.schoolsWithCollectedWebsites)} websites collected,
-            {" "}
-            {formatWhole(metadata.sourceStats.htmlPages)} HTML pages,
-            {" "}
-            {formatWhole(metadata.sourceStats.pdfs)} PDFs,
-            {" "}
-            {formatWhole(metadata.sourceStats.usableDocuments)} usable documents,
-            and {formatWhole(metadata.sourceStats.cleanedEvidenceItems)} cleaned evidence items.
-          </MethodNote>
-        )
+        content: <DataPipeline metadata={metadata} />
       },
       {
         section: "Findings",
@@ -182,12 +153,6 @@ export default function App() {
           "Foundational capacity is modest, early AI-specific signals are low, quality signals are limited, and support need remains high.",
         content: (
           <HeadlineMetricGrid metadata={metadata} schoolData={schoolIndices} />
-        ),
-        note: (
-          <MethodNote>
-            Headline means and medians are generated from the updated
-            secondary_school_ai_indices_0_100.csv support-prioritisation fields.
-          </MethodNote>
         )
       },
       {
