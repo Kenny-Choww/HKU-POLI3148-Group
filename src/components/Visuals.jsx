@@ -28,7 +28,7 @@ const barrierItems = [
 
 export function OpeningHero() {
   const [revealed, setRevealed] = useState(false);
-  const fundingSourceUrl = "http://info.gov.hk/gia/general/202512/16/P2025121600261.htm";
+  const fundingSourceUrl = "https://www.info.gov.hk/gia/general/202512/16/P2025121600261.htm";
 
   return (
     <div className="grid w-full gap-4 lg:grid-cols-2">
