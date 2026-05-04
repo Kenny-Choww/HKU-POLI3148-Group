@@ -27,12 +27,16 @@ import { GroupLegend } from "./Visuals";
 function ChartFrame({ title, annotation, note, children, controls }) {
   return (
     <div className="w-full rounded-md border border-ink/10 bg-white p-4 shadow-soft">
-      <div className="mb-4 grid gap-3 lg:grid-cols-[1fr_auto] lg:items-start">
-        <div>
+      <div className="mb-4 grid gap-3 xl:grid-cols-[minmax(260px,420px)_minmax(0,1fr)] xl:items-start">
+        <div className="min-w-0">
           <h3 className="text-xl font-black text-ink">{title}</h3>
           <p className="mt-1 text-sm font-semibold text-muted">{annotation}</p>
         </div>
-        {controls && <div className="flex flex-wrap gap-2">{controls}</div>}
+        {controls && (
+          <div className="flex min-w-0 flex-wrap gap-2 xl:justify-end">
+            {controls}
+          </div>
+        )}
       </div>
       {children}
       {note && <p className="mt-3 text-xs font-medium text-muted">{note}</p>}
@@ -429,7 +433,7 @@ export function DistrictExplorer({ districtSummary }) {
             key={option.key}
             type="button"
             onClick={() => setMetric(option)}
-            className={`rounded-md px-3 py-2 text-sm font-bold ${
+            className={`max-w-full whitespace-normal rounded-md px-3 py-2 text-left text-sm font-bold leading-tight ${
               metric.key === option.key ? "bg-ink text-white" : "border border-ink/10 bg-white"
             }`}
           >
@@ -437,12 +441,12 @@ export function DistrictExplorer({ districtSummary }) {
           </button>
         ))}
       >
-        <div className="h-[500px]">
+        <div className="h-[430px]">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               data={rows}
               layout="vertical"
-              margin={{ top: 8, right: 28, bottom: 28, left: 42 }}
+              margin={{ top: 18, right: 28, bottom: 28, left: 42 }}
             >
               <CartesianGrid stroke="#d9ded7" strokeDasharray="3 3" />
               <XAxis
@@ -451,7 +455,13 @@ export function DistrictExplorer({ districtSummary }) {
                 tick={{ fontSize: 12 }}
                 label={{ value: "Mean index score", position: "insideBottom", offset: -18 }}
               />
-              <YAxis dataKey="district" type="category" width={128} tick={{ fontSize: 12 }} />
+              <YAxis
+                dataKey="district"
+                type="category"
+                width={128}
+                interval={0}
+                tick={{ fontSize: 12 }}
+              />
               <Tooltip
                 content={({ active, payload }) => {
                   if (!active || !payload?.length) return null;

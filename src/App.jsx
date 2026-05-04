@@ -74,7 +74,7 @@ export default function App() {
   const [error, setError] = useState(null);
   const [current, setCurrent] = useState(0);
   const [appendixOpen, setAppendixOpen] = useState(false);
-  const slideCount = data ? 12 : 0;
+  const slideCount = data ? 11 : 0;
 
   useEffect(() => {
     loadStoryData().then(setData).catch(setError);
