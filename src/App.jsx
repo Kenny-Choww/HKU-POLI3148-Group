@@ -352,6 +352,14 @@ export default function App() {
       <footer className="border-t border-ink/10 bg-white px-4 py-5 text-sm text-muted sm:px-6">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <span>AI Education Implementation Capacity - interactive policy story</span>
+          <a
+            href={`${import.meta.env.BASE_URL}report.pdf`}
+            target="_blank"
+            rel="noreferrer"
+            className="font-bold text-blue-700 underline underline-offset-4 transition hover:text-blue-900"
+          >
+            Full Report
+          </a>
           <span>
             Verified data: {formatWhole(data.metadata.sourceStats.schoolsInAnalysis)} schools,
             capacity mean {formatNumber(data.metadata.headlineMetrics[0].value, 2)}

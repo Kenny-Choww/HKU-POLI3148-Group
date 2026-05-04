@@ -28,6 +28,7 @@ const barrierItems = [
 
 export function OpeningHero() {
   const [revealed, setRevealed] = useState(false);
+  const fundingSourceUrl = "http://info.gov.hk/gia/general/202512/16/P2025121600261.htm";
 
   return (
     <div className="grid w-full gap-4 lg:grid-cols-2">
@@ -48,14 +49,24 @@ export function OpeningHero() {
           </h2>
         </div>
         <div className="grid gap-3 text-lg font-semibold text-blue-950">
-          <div className="flex items-center gap-3">
+          <a
+            href={fundingSourceUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-3 text-blue-800 underline decoration-blue-500 underline-offset-4 transition hover:text-blue-950"
+          >
             <BadgeDollarSign className="text-blue-700" size={22} />
             HK$2 billion digital education support
-          </div>
-          <div className="flex items-center gap-3">
+          </a>
+          <a
+            href={fundingSourceUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-3 text-blue-800 underline decoration-blue-500 underline-offset-4 transition hover:text-blue-950"
+          >
             <Building2 className="text-blue-700" size={22} />
             HK$500,000 school-level AI grant
-          </div>
+          </a>
         </div>
       </motion.div>
 
