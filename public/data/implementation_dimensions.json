@@ -5,11 +5,11 @@
     "label": "AI assessment",
     "description": "Assessment design, integrity, or AI-related assessment practice.",
     "schools": 441,
-    "schoolsWithEvidence": 95,
-    "pctSchoolsWithEvidence": 21.54,
-    "meanScore": 12.55,
+    "schoolsWithEvidence": 142,
+    "pctSchoolsWithEvidence": 32.2,
+    "meanScore": 19.5,
     "medianScore": 0.0,
-    "totalEvidenceItems": 604
+    "totalEvidenceItems": 645
   },
   {
     "family": "earlySignal",
@@ -17,11 +17,11 @@
     "label": "AI-assisted teaching",
     "description": "Direct public evidence of AI-assisted teaching or classroom use.",
     "schools": 441,
-    "schoolsWithEvidence": 115,
-    "pctSchoolsWithEvidence": 26.08,
-    "meanScore": 15.95,
+    "schoolsWithEvidence": 172,
+    "pctSchoolsWithEvidence": 39.0,
+    "meanScore": 26.61,
     "medianScore": 0.0,
-    "totalEvidenceItems": 669
+    "totalEvidenceItems": 1515
   },
   {
     "family": "earlySignal",
@@ -29,11 +29,11 @@
     "label": "AI literacy activities",
     "description": "Published activities that explicitly build student AI literacy.",
     "schools": 441,
-    "schoolsWithEvidence": 140,
-    "pctSchoolsWithEvidence": 31.75,
-    "meanScore": 14.97,
+    "schoolsWithEvidence": 206,
+    "pctSchoolsWithEvidence": 46.71,
+    "meanScore": 28.34,
     "medianScore": 0.0,
-    "totalEvidenceItems": 428
+    "totalEvidenceItems": 1043
   },
   {
     "family": "earlySignal",
@@ -41,11 +41,11 @@
     "label": "AI tools / platforms",
     "description": "Named AI platforms, tools, or school-level access to AI tools.",
     "schools": 441,
-    "schoolsWithEvidence": 15,
-    "pctSchoolsWithEvidence": 3.4,
-    "meanScore": 1.21,
+    "schoolsWithEvidence": 80,
+    "pctSchoolsWithEvidence": 18.14,
+    "meanScore": 9.3,
     "medianScore": 0.0,
-    "totalEvidenceItems": 21
+    "totalEvidenceItems": 170
   },
   {
     "family": "earlySignal",
@@ -53,11 +53,11 @@
     "label": "AI procurement",
     "description": "Procurement, purchasing, or vendor/process signals related to AI tools.",
     "schools": 441,
-    "schoolsWithEvidence": 58,
-    "pctSchoolsWithEvidence": 13.15,
-    "meanScore": 7.33,
-    "medianScore": 0.0,
-    "totalEvidenceItems": 233
+    "schoolsWithEvidence": 222,
+    "pctSchoolsWithEvidence": 50.34,
+    "meanScore": 35.45,
+    "medianScore": 33.33,
+    "totalEvidenceItems": 2723
   },
   {
     "family": "earlySignal",
@@ -65,11 +65,11 @@
     "label": "AI teacher development",
     "description": "Professional development specifically focused on AI use.",
     "schools": 441,
-    "schoolsWithEvidence": 93,
-    "pctSchoolsWithEvidence": 21.09,
-    "meanScore": 13.76,
+    "schoolsWithEvidence": 113,
+    "pctSchoolsWithEvidence": 25.62,
+    "meanScore": 14.06,
     "medianScore": 0.0,
-    "totalEvidenceItems": 497
+    "totalEvidenceItems": 472
   },
   {
     "family": "earlySignal",
@@ -77,11 +77,11 @@
     "label": "Cross-subject AI use",
     "description": "AI use across more than one subject or curriculum area.",
     "schools": 441,
-    "schoolsWithEvidence": 232,
-    "pctSchoolsWithEvidence": 52.61,
-    "meanScore": 37.72,
-    "medianScore": 33.33,
-    "totalEvidenceItems": 1740
+    "schoolsWithEvidence": 199,
+    "pctSchoolsWithEvidence": 45.12,
+    "meanScore": 26.98,
+    "medianScore": 0.0,
+    "totalEvidenceItems": 1052
   },
   {
     "family": "earlySignal",
@@ -89,10 +89,10 @@
     "label": "Responsible AI",
     "description": "Responsible-AI, ethics, privacy, or safe-use implementation signals.",
     "schools": 441,
-    "schoolsWithEvidence": 49,
-    "pctSchoolsWithEvidence": 11.11,
-    "meanScore": 6.65,
+    "schoolsWithEvidence": 65,
+    "pctSchoolsWithEvidence": 14.74,
+    "meanScore": 7.03,
     "medianScore": 0.0,
-    "totalEvidenceItems": 138
+    "totalEvidenceItems": 155
   }
 ]

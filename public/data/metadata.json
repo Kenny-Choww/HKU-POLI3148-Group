@@ -3,32 +3,32 @@
     {
       "key": "foundationalCapacity",
       "label": "Foundational AI Implementation Capacity",
-      "value": 27.44,
-      "median": 19.05,
+      "value": 31.01,
+      "median": 23.81,
       "suffix": "/ 100",
       "meaning": "Basic capacity to absorb future AI funding."
     },
     {
       "key": "earlySignal",
       "label": "Early AI-Specific Signal",
-      "value": 13.77,
-      "median": 8.33,
+      "value": 20.91,
+      "median": 12.5,
       "suffix": "/ 100",
       "meaning": "Direct AI-related public evidence, treated cautiously because policy implementation is still early."
     },
     {
       "key": "quality",
       "label": "AI Quality of Use",
-      "value": 16.93,
-      "median": 5.56,
+      "value": 20.42,
+      "median": 11.11,
       "suffix": "/ 100",
       "meaning": "Public signals of deeper AI use beyond simple mentions."
     },
     {
       "key": "supportNeed",
       "label": "Early-Warning Support Need",
-      "value": 76.86,
-      "median": 87.96,
+      "value": 74.28,
+      "median": 84.94,
       "suffix": "/ 100",
       "meaning": "Candidate need for validation, teacher support, governance support, infrastructure support, or contextual support."
     },
@@ -36,7 +36,7 @@
       "key": "visibility",
       "label": "Evidence Confidence / Publication Visibility",
       "value": 50.11,
-      "median": 53.31,
+      "median": 53.78,
       "suffix": "/ 100",
       "meaning": "How much public evidence is visible, so publication practice is not confused with school quality."
     }
@@ -56,11 +56,17 @@
     "tier4": "Lowest 25%"
   },
   "gini": {
-    "foundationalCapacity": 0.566,
-    "earlySignal": 0.627,
-    "quality": 0.634,
-    "supportNeed": 0.183,
-    "visibility": 0.303
+    "foundationalCapacity": 0.54,
+    "earlySignal": 0.613,
+    "quality": 0.631,
+    "supportNeed": 0.204,
+    "visibility": 0.304
   },
-  "verificationNote": "Headline values are generated from the updated support-prioritisation index files."
+  "nlpMethod": {
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "semanticCandidates": 7778,
+    "medianConfidence": 0.712,
+    "description": "Natural Language Processing classifies cleaned public evidence by semantic similarity to theme prototypes before dimension scores are converted into 0-100 indices."
+  },
+  "verificationNote": "Headline values are generated from the current support-prioritisation index files."
 }

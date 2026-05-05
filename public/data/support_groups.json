@@ -41,7 +41,7 @@
       "medianSupportNeed": 100.0,
       "meanFoundationalCapacity": 0.0,
       "meanEarlySignal": 0.0,
-      "meanVisibility": 14.6
+      "meanVisibility": 15.22
     },
     {
       "key": "tier2",
@@ -58,11 +58,11 @@
         "Governance guidance"
       ],
       "percentileBand": "Next 15%",
-      "meanSupportNeed": 99.83,
+      "meanSupportNeed": 99.79,
       "medianSupportNeed": 100.0,
-      "meanFoundationalCapacity": 0.29,
-      "meanEarlySignal": 0.69,
-      "meanVisibility": 16.66
+      "meanFoundationalCapacity": 0.72,
+      "meanEarlySignal": 0.0,
+      "meanVisibility": 15.43
     },
     {
       "key": "tier3",
@@ -79,11 +79,11 @@
         "Implementation clinics"
       ],
       "percentileBand": "Middle 50%",
-      "meanSupportNeed": 86.03,
-      "medianSupportNeed": 87.92,
-      "meanFoundationalCapacity": 19.96,
-      "meanEarlySignal": 10.45,
-      "meanVisibility": 51.79
+      "meanSupportNeed": 83.3,
+      "medianSupportNeed": 84.94,
+      "meanFoundationalCapacity": 24.03,
+      "meanEarlySignal": 13.77,
+      "meanVisibility": 51.75
     },
     {
       "key": "tier4",
@@ -100,11 +100,11 @@
         "Voluntary mentoring"
       ],
       "percentileBand": "Lowest 25%",
-      "meanSupportNeed": 35.27,
-      "medianSupportNeed": 36.38,
-      "meanFoundationalCapacity": 69.91,
-      "meanEarlySignal": 33.86,
-      "meanVisibility": 81.35
+      "meanSupportNeed": 30.41,
+      "medianSupportNeed": 32.66,
+      "meanFoundationalCapacity": 75.84,
+      "meanEarlySignal": 56.29,
+      "meanVisibility": 81.92
     }
   ]
 }
