@@ -21,6 +21,7 @@ import {
   DataPipeline,
   FinalChain,
   HeadlineMetricGrid,
+  NlpIndexMethod,
   OpeningHero,
   PolicyChain
 } from "./components/Visuals";
@@ -73,7 +74,7 @@ export default function App() {
   const [error, setError] = useState(null);
   const [current, setCurrent] = useState(0);
   const [appendixOpen, setAppendixOpen] = useState(false);
-  const slideCount = data ? 11 : 0;
+  const slideCount = data ? 12 : 0;
 
   useEffect(() => {
     loadStoryData().then(setData).catch(setError);
@@ -144,6 +145,14 @@ export default function App() {
         insight:
           "This study reads public evidence systematically, but treats the result as an early-warning support proxy, not a school grade.",
         content: <DataPipeline metadata={metadata} />
+      },
+      {
+        section: "Method",
+        title: "How NLP turns public documents into index evidence.",
+        question: "What kinds of wording are linked to each implementation theme?",
+        insight:
+          "The model groups snippets by semantic meaning first; index scores are built from capped, confidence-weighted theme evidence.",
+        content: <NlpIndexMethod metadata={metadata} />
       },
       {
         section: "Findings",

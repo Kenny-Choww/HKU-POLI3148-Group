@@ -28,6 +28,12 @@ def read_csv(path: str) -> pd.DataFrame:
     return pd.read_csv(REPO_ROOT / path)
 
 
+def read_latest_processed(path: str) -> pd.DataFrame:
+    csv_path = REPO_ROOT / path
+    nlp_path = csv_path.with_name(f"{csv_path.stem}_nlp{csv_path.suffix}")
+    return pd.read_csv(nlp_path if nlp_path.exists() else csv_path)
+
+
 def round_value(value, digits=2):
     if pd.isna(value):
         return None
@@ -187,10 +193,10 @@ def build_tiers(tier_counts: pd.DataFrame) -> list[dict]:
 
 
 def build_data() -> None:
-    ai = read_csv("data/processed_data/secondary_school_ai_indices_0_100.csv")
-    support = read_csv("data/processed_data/secondary_school_support_priority_groups.csv")
+    ai = read_latest_processed("data/processed_data/secondary_school_ai_indices_0_100.csv")
+    support = read_latest_processed("data/processed_data/secondary_school_support_priority_groups.csv")
     features = read_csv("data/processed_data/secondary_school_analysis_features.csv")
-    evidence = read_csv("data/processed_data/secondary_school_evidence_items_cleaned.csv")
+    evidence = read_latest_processed("data/processed_data/secondary_school_evidence_items_cleaned.csv")
 
     foundational_dimensions = read_csv(
         "outputs/tables/foundational_capacity_dimension_summary.csv"
@@ -310,6 +316,17 @@ def build_data() -> None:
     stats_by_metric = {
         row["metric"]: row.to_dict() for _, row in distribution_stats.iterrows()
     }
+    ai_semantic_candidates = (
+        int(evidence["ai_semantic_candidate"].fillna(False).astype(bool).sum())
+        if "ai_semantic_candidate" in evidence.columns
+        else None
+    )
+    nlp_confidence_median = (
+        round_value(evidence["nlp_confidence_score"].median(), 3)
+        if "nlp_confidence_score" in evidence.columns
+        else None
+    )
+
     metadata = {
         "headlineMetrics": headline,
         "sourceStats": {
@@ -335,7 +352,13 @@ def build_data() -> None:
             "supportNeed": round_value(stats_by_metric[SUPPORT_NEED]["gini"], 3),
             "visibility": round_value(stats_by_metric[VISIBILITY]["gini"], 3),
         },
-        "verificationNote": "Headline values are generated from the updated support-prioritisation index files.",
+        "nlpMethod": {
+            "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+            "semanticCandidates": ai_semantic_candidates,
+            "medianConfidence": nlp_confidence_median,
+            "description": "Natural Language Processing classifies cleaned public evidence by semantic similarity to theme prototypes before dimension scores are converted into 0-100 indices.",
+        },
+        "verificationNote": "Headline values are generated from the current support-prioritisation index files.",
     }
 
     tiers = build_tiers(tier_counts)
@@ -472,7 +495,7 @@ def build_data() -> None:
 
     print(f"Wrote normalized web-story data to {OUT_DIR}")
     print(
-        "Verified updated support-prioritisation data: "
+        "Verified support-prioritisation data: "
         f"{len(ai)} schools, "
         f"{metadata['sourceStats']['htmlPages']} HTML pages, "
         f"{metadata['sourceStats']['pdfs']} PDFs, "

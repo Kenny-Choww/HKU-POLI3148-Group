@@ -4,10 +4,12 @@ import {
   ArrowRight,
   BadgeDollarSign,
   BookMarked,
+  BrainCircuit,
   Building2,
   FileText,
   GraduationCap,
   Landmark,
+  Layers3,
   MonitorCheck,
   Network,
   ShieldCheck,
@@ -176,7 +178,7 @@ const chainSteps = [
     icon: Sparkles,
     risk: "Is implementation reviewed, improved, and supported over time?",
     detail:
-      "The updated index is an early-warning support-prioritisation tool. It identifies candidates for validation and support, not school grades."
+      "The index is an early-warning support-prioritisation tool. It identifies candidates for validation and support, not school grades."
   }
 ];
 
@@ -202,7 +204,7 @@ export function PolicyChain() {
         </p>
         <div className="mt-6 rounded-md border border-blue-200 bg-blue-50 p-4">
           <p className="text-sm font-bold text-blue-950">
-            The updated index follows this chain as an early-warning and
+            The index follows this chain as an early-warning and
             support-prioritisation tool.
           </p>
         </div>
@@ -408,6 +410,200 @@ export function DataPipeline({ metadata }) {
         </div>
         <CaveatBox>
           Public website evidence can miss activity that schools do not publish.
+        </CaveatBox>
+      </div>
+    </div>
+  );
+}
+
+const nlpThemeExamples = [
+  {
+    theme: "Strategic leadership and planning",
+    icon: BookMarked,
+    wording: [
+      "school plan",
+      "annual plan",
+      "major concern",
+      "digital strategy",
+      "development plan"
+    ],
+    index: "Foundational capacity"
+  },
+  {
+    theme: "E-learning infrastructure",
+    icon: MonitorCheck,
+    wording: [
+      "e-learning platform",
+      "LMS",
+      "Google Classroom",
+      "BYOD",
+      "tablet",
+      "smart classroom"
+    ],
+    index: "Foundational capacity"
+  },
+  {
+    theme: "Teacher development",
+    icon: GraduationCap,
+    wording: [
+      "teacher training",
+      "professional development",
+      "staff workshop",
+      "lesson sharing",
+      "AI teacher training"
+    ],
+    index: "Foundational capacity / AI signal"
+  },
+  {
+    theme: "Governance and responsible use",
+    icon: ShieldCheck,
+    wording: [
+      "privacy",
+      "data security",
+      "cybersecurity",
+      "academic integrity",
+      "responsible AI",
+      "AI ethics"
+    ],
+    index: "Foundational capacity / support need"
+  },
+  {
+    theme: "AI classroom practice",
+    icon: Sparkles,
+    wording: [
+      "AI literacy",
+      "AI-assisted teaching",
+      "ChatGPT",
+      "generative AI",
+      "AI assessment",
+      "cross-subject AI"
+    ],
+    index: "Early AI-specific signal"
+  },
+  {
+    theme: "Resource mobilisation",
+    icon: BadgeDollarSign,
+    wording: [
+      "procurement",
+      "tender",
+      "subscription",
+      "vendor",
+      "grant use",
+      "AI tools"
+    ],
+    index: "Capacity / AI procurement"
+  }
+];
+
+export function NlpIndexMethod({ metadata }) {
+  const method = metadata.nlpMethod || {};
+
+  return (
+    <div className="grid w-full gap-5 xl:grid-cols-[0.82fr_1.18fr]">
+      <div className="flex flex-col justify-between rounded-md border border-ink/10 bg-white p-6 shadow-soft">
+        <div>
+          <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-md bg-ink text-white">
+            <BrainCircuit size={25} />
+          </div>
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-muted">
+            NLP scoring logic
+          </p>
+          <h3 className="mt-3 text-4xl font-black leading-tight text-ink">
+            Documents become theme evidence before they become scores.
+          </h3>
+          <p className="mt-4 text-lg font-medium leading-relaxed text-muted">
+            Natural Language Processing compares each cleaned evidence snippet
+            with theme descriptions. A snippet is assigned to the theme it is
+            semantically closest to, then school-level theme evidence is capped,
+            weighted, and converted into 0-100 indices.
+          </p>
+        </div>
+
+        <div className="mt-6 grid gap-3">
+          <div className="rounded-md border border-blue-200 bg-blue-50 p-4">
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-blue-800">
+              Model
+            </p>
+            <p className="mt-2 break-words text-lg font-black text-blue-950">
+              {method.model || "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"}
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="rounded-md border border-ink/10 bg-paper p-4">
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-muted">
+                AI-semantic evidence
+              </p>
+              <p className="mt-2 text-3xl font-black text-ink">
+                {formatWhole(method.semanticCandidates)}
+              </p>
+            </div>
+            <div className="rounded-md border border-ink/10 bg-paper p-4">
+              <p className="text-xs font-bold uppercase tracking-[0.14em] text-muted">
+                Median NLP confidence
+              </p>
+              <p className="mt-2 text-3xl font-black text-ink">
+                {formatNumber(method.medianConfidence, 3)}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="rounded-md border border-ink/10 bg-white p-5 shadow-soft">
+        <div className="mb-4 flex items-center gap-3">
+          <span className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-blue-50 text-blue-700">
+            <Layers3 size={22} />
+          </span>
+          <div>
+            <h3 className="text-2xl font-black text-ink">
+              Example wording-to-theme map
+            </h3>
+            <p className="text-sm font-semibold text-muted">
+              These examples illustrate the meaning of each theme; scoring uses
+              semantic similarity, not simple word counting.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid gap-3 md:grid-cols-2">
+          {nlpThemeExamples.map((item) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={item.theme}
+                className="rounded-md border border-ink/10 bg-paper p-4"
+              >
+                <div className="flex items-start gap-3">
+                  <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-white text-ink">
+                    <Icon size={19} />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-base font-black leading-tight text-ink">
+                      {item.theme}
+                    </p>
+                    <p className="mt-1 text-xs font-bold uppercase tracking-[0.12em] text-muted">
+                      {item.index}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {item.wording.map((word) => (
+                    <span
+                      key={`${item.theme}-${word}`}
+                      className="rounded-md border border-ink/10 bg-white px-2 py-1 text-xs font-bold text-ink"
+                    >
+                      {word}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <CaveatBox tone="blue">
+          The output is a support-prioritisation signal. Low public evidence
+          should trigger validation and support, not public ranking.
         </CaveatBox>
       </div>
     </div>
